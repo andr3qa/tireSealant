@@ -1,0 +1,6 @@
+@use "mixins"as *;
+
+@include font-face("Futura New", "../fonts/FuturaNewBook", 400, normal);
+@include font-face("Futura New", "../fonts/FuturaNewBold", 700, normal);
+@include font-face("Futura New", "../fonts/FuturaNewMedium", 500, normal);
+@include font-face("Futura New", "../fonts/FuturaNewDemi", 600, normal);

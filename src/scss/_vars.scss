@@ -1,0 +1,11 @@
+:root {
+  --fontFamily: "Futura New", sans-serif;
+  --contentWidth: 1140px;
+  --siteWidthMax: 1920px;
+  --siteWidthMin: 360px;
+  --containerOffset: 15px;
+  --containerWidth: calc(var(--contentWidth) + var(--containerOffset) * 2);
+  --mainColor: #3f6745;
+  --fontColor: #444;
+  --titleColor: #2b2b2b;
+}
