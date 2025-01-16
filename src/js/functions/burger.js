@@ -1,5 +1,9 @@
-import { disableScroll } from "../functions/disable-scroll.js";
-import { enableScroll } from "../functions/enable-scroll.js";
+import {
+  disableScroll
+} from "../functions/disable-scroll.js";
+import {
+  enableScroll
+} from "../functions/enable-scroll.js";
 
 (function () {
   const burger = document?.querySelector("[data-burger]");
@@ -9,9 +13,9 @@ import { enableScroll } from "../functions/enable-scroll.js";
 
   burger?.addEventListener("click", (e) => {
     burger?.classList.toggle("burger--active");
-    menu?.classList.toggle("mobile-menu_active");
+    menu?.classList.toggle("header__info_active");
 
-    if (menu?.classList.contains("mobile-menu_active")) {
+    if (menu?.classList.contains("header__info_active")) {
       burger?.setAttribute("aria-expanded", "true");
       burger?.setAttribute("aria-label", "Закрыть меню");
       disableScroll();
@@ -26,7 +30,7 @@ import { enableScroll } from "../functions/enable-scroll.js";
     burger?.setAttribute("aria-expanded", "false");
     burger?.setAttribute("aria-label", "Открыть меню");
     burger.classList.remove("burger--active");
-    menu.classList.remove("mobile-menu_active");
+    menu.classList.remove("header__info_active");
     enableScroll();
   });
 
@@ -35,7 +39,7 @@ import { enableScroll } from "../functions/enable-scroll.js";
       burger?.setAttribute("aria-expanded", "false");
       burger?.setAttribute("aria-label", "Открыть меню");
       burger.classList.remove("burger--active");
-      menu.classList.remove("mobile-menu_active");
+      menu.classList.remove("header__info_active");
       enableScroll();
     });
   });
