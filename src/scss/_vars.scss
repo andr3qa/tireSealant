@@ -1,11 +1,21 @@
+@use "mixins"as *;
+
 :root {
-  --fontFamily: "Futura New", sans-serif;
-  --contentWidth: 1140px;
-  --siteWidthMax: 1920px;
-  --siteWidthMin: 360px;
-  --containerOffset: 15px;
-  --containerWidth: calc(var(--contentWidth) + var(--containerOffset) * 2);
-  --mainColor: #3f6745;
-  --fontColor: #444;
-  --titleColor: #2b2b2b;
+  --font-family: "Futura New", sans-serif;
+  --content-width: 1140px;
+  --site-width-max: 1920px;
+  --site-width-min: 360px;
+  --container-offset: 30px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+  --background-color: #F5F4F0;
+  --main-color: #3f6745;
+  --font-color: #444;
+  --title-color: #2b2b2b;
+  --title-bcg-color: #e9e6dc;
+}
+
+@include media(700) {
+  :root {
+    --container-offset: 15px;
+  }
 }

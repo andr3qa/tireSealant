@@ -6,16 +6,17 @@
 
 .page {
   height: 100%;
-  font-family: var(--fontFamily);
+  font-family: var(--font-family);
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
-  color: var(--fontColor);
+  color: var(--font-color);
+  background-color: var(--background-color);
   scroll-behavior: smooth;
 }
 
 .page-body {
   margin: 0;
-  min-width: var(--siteWidthMin);
+  min-width: var(--site-width-min);
   min-height: 100%;
   font-size: 16px;
 }
@@ -29,6 +30,16 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 .site-container {
@@ -81,13 +92,13 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--containerOffset);
-  max-width: var(--containerWidth);
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
 }
 
 .container-big {
   margin: 0 auto;
-  max-width: var(--siteWidthMax);
+  max-width: var(--site-width-max);
 }
 
 .centered {

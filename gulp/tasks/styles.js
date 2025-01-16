@@ -25,7 +25,7 @@ export const styles = () => {
     .pipe(autoprefixer({
       cascade: false,
       grid: true,
-      overrideBrowserslist: ["last 5 versions"]
+      overrideBrowserslist: ["last 5 versions", "not ie > 0", "not ie_mob > 0"]
     }))
     .pipe(gulpif(app.isProd, cleanCSS({
       level: 2

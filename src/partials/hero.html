@@ -1,3 +1,35 @@
 <section class="hero">
-  <div class="container hero__container"></div>
+  <div class="container hero__container">
+    <p class="hero__subtitle">
+      Уникальный продукт
+    </p>
+    <h1 class="section-title hero__section-title">Герметик <br> для шин</h1>
+    <button class="btn-reset btn btn_size_l hero__btn">Заказать</button>
+    <div class="hero__items">
+      <div class="hero-item hero__hero-item">
+        <div class="hero-item__icon">
+          <svg class="hero-item__svg">
+            <use xlink:href="img/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <p class="hero-item__txt">
+          Экономия самого дорогого <br> ресурса – времени
+        </p>
+      </div>
+      <div class="hero-item hero__hero-item">
+        <div class="hero-item__icon">
+          <svg class="hero-item__svg">
+            <use xlink:href="img/sprite.svg#wallet"></use>
+          </svg>
+        </div>
+        <p class="hero-item__txt">
+          Экономия средств при покупке <br> новой шины
+        </p>
+      </div>
+    </div>
+    <picture class="picture hero__picture">
+      <source class="picture__src" srcset="./img/hero__img.webp" type="image/webp">
+      <img class="picture__img" loading="lazy" src="./img/hero__img.png" width="887" height="885" alt="">
+    </picture>
+  </div>
 </section>

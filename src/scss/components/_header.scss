@@ -1,3 +1,97 @@
 @use "mixins"as *;
 
-.header {}
+.header {
+  padding: 25px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__burger {
+    display: none;
+    border-radius: 3px;
+    padding: 12px 12px 10px;
+    box-shadow: 0 10px 35px 0 rgba(63, 103, 69, 0.4);
+    background-color: var(--main-color);
+
+    @include media(1100) {
+      display: block;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+
+  & {
+    width: 20px;
+    height: 15px;
+    color: #fff;
+  }
+}
+
+.nav {
+  &__item {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 25px;
+      border-left: 1px solid #d4d0bd;
+      padding-left: 25px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    color: #3a3a3a;
+  }
+
+  @include media(1100) {
+    display: none;
+  }
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+
+  &__phone {
+    font-weight: 500;
+    font-size: 18px;
+    color: #3a3a3a;
+  }
+
+  @include media(1100) {
+    display: none;
+  }
+}
+
+.btn {
+  border-radius: 3px;
+  box-shadow: 0 10px 35px 0 rgba(63, 103, 69, 0.4);
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  background: var(--main-color);
+
+  &_size {
+    &_s {
+      padding: 13px;
+      width: 172px;
+    }
+
+    &_l {
+      padding: 18px;
+      width: 197px;
+
+      @include media(900) {
+        padding: 10px;
+        width: 150px;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,4 +1,25 @@
 <header class="header">
   <div class="container header__container">
+    <picture class="picture header__picture">
+      <source class="picture__src" srcset="./img/logo.webp" type="image/webp">
+      <img class="picture__img" loading="lazy" src="./img/logo.png" width="45" height="45" alt="Лого">
+    </picture>
+    <nav class="nav header__nav">
+      <ul class="list-reset nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Преимущуства</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Как работает герметик</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="connection header__connection">
+      <p class="connection__phone">+38 (097) 135 56 78</p>
+      <button class="btn-reset btn btn_size_s connection__btn">Обратный звонок</button>
+    </div>
+    <div class="header__burger">
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
   </div>
 </header>
