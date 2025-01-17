@@ -1,0 +1,239 @@
+@use "mixins"as *;
+
+.advantages {
+  padding: 85px 0 297px;
+
+  &__section-title {
+    margin-bottom: 87px;
+  }
+
+  &__item-wrap {
+    position: relative;
+  }
+
+  &__item-wrap-bg {
+    width: 100%;
+    height: 538px;
+    background: center / cover no-repeat;
+
+    @include media(900) {
+      height: 400px;
+    }
+
+    @include media(500) {
+      height: 221px;
+    }
+
+    &_1 {
+      background-image: url("./../img/advantages-item__bg_1.webp");
+    }
+
+    &_2 {
+      margin-top: 100px;
+      background-image: url("./../img/advantages-item__bg_2.webp");
+
+      @include media(900) {
+        margin-top: 250px;
+      }
+
+      @include media(500) {
+        margin-top: 400px;
+      }
+    }
+  }
+}
+
+.advantages-item {
+  position: absolute;
+  border-radius: 5px;
+  padding: 40px 60px;
+  max-width: 684px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+
+  @include media(900) {
+    padding: 20px 15px;
+
+    // max-width: 310px;
+  }
+
+  &_1 {
+    right: 26px;
+    top: 115px;
+
+    @include media(900) {
+      right: 0;
+      top: auto;
+      bottom: -180px;
+    }
+
+    @include media(500) {
+      bottom: -348px;
+    }
+  }
+
+  &_2 {
+    left: 53px;
+    bottom: -29px;
+
+    @include media(900) {
+      left: auto;
+      right: 0;
+      bottom: -100px;
+    }
+
+    @include media(500) {
+      bottom: -222px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--title-color);
+
+    @include media(900) {
+      font-size: 30px;
+    }
+  }
+
+  &__txt {
+    margin-top: 20px;
+    border-left: 2px solid var(--main-color);
+    padding-left: 18px;
+    font-weight: 700;
+    font-size: 22px;
+
+    @include media(900) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__elem {
+    position: relative;
+    padding-left: 27px;
+    font-size: 18px;
+
+    @include media(900) {
+      font-size: 14px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 2px;
+      width: 17px;
+      height: 17px;
+      color: #fff;
+      background: center / 60% no-repeat url("./../img/arrow.svg");
+      background-color: #2b2b2b;
+    }
+
+    &:not(:first-child) {
+      margin-top: 26px;
+    }
+  }
+}
+
+.save-time {
+  margin-top: 110px;
+
+  @include media(900) {
+    margin-top: 150px;
+  }
+
+  @include media(500) {
+    margin-top: 250px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    @include media(1100) {
+      flex-direction: column;
+      align-items: center;
+      gap: 120px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 280px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--title-color);
+
+    @include media(500) {
+      font-size: 35px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    border-radius: 5px;
+    width: 280px;
+    height: 286px;
+    background: center / cover no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: -15px;
+      z-index: -1;
+      border-radius: 5px;
+      width: 280px;
+      height: 286px;
+      background-color: #e9e6dc;
+    }
+
+    &_1 {
+      background-image: url("./../img/save-item__img_1.webp");
+    }
+
+    &_2 {
+      background-image: url("./../img/save-item__img_2.webp");
+    }
+
+    &_3 {
+      background-image: url("./../img/save-item__img_3.webp");
+    }
+  }
+
+  &__txt {
+    position: absolute;
+    right: -20px;
+    bottom: -70px;
+    border-radius: 5px;
+    padding: 20px 30px;
+    max-width: 280px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+  }
+
+  &__p {
+    &:first-child {
+      margin-left: -10px;
+      border-left: 2px solid var(--main-color);
+      padding-left: 10px;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    &:last-child {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+}

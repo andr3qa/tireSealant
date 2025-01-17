@@ -112,7 +112,11 @@
   }
 
   @include media(900) {
-    font-size: 50px;
+    font-size: 60px;
+  }
+
+  @include media(500) {
+    font-size: 40px;
   }
 }
 
