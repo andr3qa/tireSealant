@@ -111,6 +111,14 @@
     }
   }
 
+  &_white {
+    color: #fff;
+
+    &::before {
+      background-color: #212121
+    }
+  }
+
   @include media(900) {
     font-size: 60px;
   }

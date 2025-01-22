@@ -1,7 +1,11 @@
 @use "mixins"as *;
 
 .advantages {
-  padding: 85px 0 297px;
+  padding: 85px 0 200px;
+
+  @include media(500) {
+    padding: 85px 0 150px;
+  }
 
   &__section-title {
     margin-bottom: 87px;

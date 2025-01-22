@@ -1,0 +1,87 @@
+@use "mixins"as *;
+
+.feedback {
+  position: relative;
+  padding: 77px 0 101px;
+  background-color: #2a2a2a;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -516px;
+    top: 70px;
+    width: 100%;
+    height: 97px;
+    background-color: #212121;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -335px;
+    bottom: 35px;
+    width: 50%;
+    height: 97px;
+    background-color: #212121;
+  }
+
+  @include media(900) {
+    padding: 42px 0 51px;
+  }
+
+  &__subtitle {
+    margin-top: 26px;
+    border-left: 2px solid #3f6745;
+    padding-left: 9px;
+    font-size: 18px;
+    color: #f2f2f2;
+  }
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 40px;
+  gap: 28px;
+
+  @include media(900) {
+    grid-template-columns: 1fr;
+  }
+
+  &__label {
+    &:nth-child(4) {
+      grid-column: 1 / 4;
+
+      @include media(900) {
+        grid-column: auto;
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+
+    &::placeholder {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  &__btn {
+    justify-self: end;
+    grid-column: 3 / 4;
+
+    @include media(900) {
+      grid-column: auto;
+    }
+  }
+}
