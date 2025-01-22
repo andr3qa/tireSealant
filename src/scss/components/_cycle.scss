@@ -1,0 +1,148 @@
+@use "mixins"as *;
+
+.cycle {
+  position: relative;
+  padding: 40px 0 75px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -400px;
+    bottom: 0;
+    width: 50%;
+    height: 418px;
+    background-color: #e9e6dc;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    @include media(1100) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-photo {
+    border-radius: 5px;
+    width: 340px;
+    height: 288px;
+    background: center / cover no-repeat;
+
+    &_1 {
+      background-image: url("./../img/cycle__img_1.webp");
+    }
+
+    &_2 {
+      background-image: url("./../img/cycle__img_2.webp");
+    }
+
+    &_3 {
+      background-image: url("./../img/cycle__img_3.webp");
+    }
+  }
+
+  &__item-txt {
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    border-radius: 5px;
+    padding: 20px;
+    width: 340px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+  }
+
+  &__item-p {
+    border-left: 2px solid #3f6745;
+    padding-left: 9px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin: 65px auto 0;
+    gap: 10px;
+  }
+
+  &__btn-svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }
+}
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 50px 130px;
+  background-color: #fff;
+  gap: 90px;
+
+  @include media(1100) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__icon {
+    margin: 0 auto;
+    width: 110px;
+    height: 110px;
+    background: center / cover no-repeat;
+
+    &_1 {
+      background-image: url("./../img/cycle__icon_1.svg");
+    }
+
+    &_2 {
+      background-image: url("./../img/cycle__icon_2.svg");
+    }
+
+    &_3 {
+      background-image: url("./../img/cycle__icon_3.svg");
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  &__arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include media(1100) {
+      rotate: 90deg;
+    }
+  }
+
+  &__arrow-svg {
+    width: 54px;
+    height: 26px;
+    fill: #ddd6bf;
+
+    &:nth-child(2) {
+      rotate: 180deg;
+    }
+  }
+}
