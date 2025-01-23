@@ -1,0 +1,162 @@
+@use "mixins"as *;
+
+.reviews {
+  padding: 100px 0;
+
+  @include media(500) {
+    padding: 50px 0 120px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__swiper {
+    margin-top: 40px;
+  }
+}
+
+.reviews-swiper-button {
+  position: absolute;
+  right: -50px;
+  top: 300px;
+  border: 1px solid var(--main-color);
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 10px 35px 0 rgba(63, 103, 69, 0.4);
+  line-height: 79px;
+  text-align: center;
+  background-color: var(--main-color);
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2f4f34;
+  }
+
+  &:active {
+    background-color: #57885f;
+  }
+
+  @include media(1300) {
+    inset: 0;
+    margin: 540px auto 0;
+  }
+
+  @include media(900) {
+    margin: 470px auto 0;
+  }
+
+  &_prev {
+    left: -50px;
+    rotate: 180deg;
+
+    @include media(1300) {
+      left: -80px;
+    }
+  }
+
+  &_next {
+    @include media(1300) {
+      right: -80px;
+    }
+  }
+
+  &__svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    transition: 0.2s;
+  }
+}
+
+.swiper-button-disabled {
+  box-shadow: none;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    cursor: auto;
+  }
+
+  .reviews-swiper-button__svg {
+    fill: var(--main-color);
+  }
+}
+
+.reviews-item {
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px 40px;
+  max-width: 555px;
+  background-color: #fff;
+
+  &__p {
+    position: relative;
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 150%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -30px;
+      width: 15px;
+      height: 15px;
+      background: center / cover no-repeat url("./../img/quotes.svg");
+    }
+  }
+}
+
+.reviews-user {
+  display: flex;
+  align-items: center;
+  margin-left: -40px;
+  border-radius: 0 10px 10px 0;
+  padding: 11px 11px 19px 21px;
+  max-width: 380px;
+  background-color: #f5f4f0;
+  gap: 21px;
+
+  &__photo {
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    background: center / cover no-repeat;
+
+    &_1 {
+      background-image: url("./../img/reviews__photo_1.webp");
+    }
+
+    &_2 {
+      background-image: url("./../img/reviews__photo_2.webp");
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    color: var(--title-color);
+  }
+
+  &__icon {
+    display: inline-block;
+    border-radius: 3px;
+    width: 16px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    background-color: #e9e6dc;
+  }
+
+  &__date-svg {
+    width: 10px;
+    height: 10px;
+    fill: var(--font-color);
+  }
+
+  &__date-span {
+    display: inline-block;
+    font-size: 14px;
+  }
+}
