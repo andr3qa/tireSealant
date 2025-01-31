@@ -1,3 +1,165 @@
 @use "mixins"as *;
 
-.footer {}
+.footer {
+  border-top: 2px solid #e9e6dc;
+  padding: 50px 0;
+
+  @include media(500) {
+    padding: 25px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include media(1100) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__logo {
+    align-self: start;
+    margin-top: -35px;
+
+    @include media(1100) {
+      align-self: auto;
+      margin-top: 0;
+    }
+  }
+}
+
+.footer-nav {
+  display: grid;
+  align-self: start;
+  grid-template-columns: 1fr 60px;
+  max-width: 310px;
+  gap: 10px 50px;
+
+
+  &__link {
+    font-size: 15px;
+    color: #3a3a3a;
+  }
+}
+
+.social {
+  &__item {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__link {
+    display: block;
+    border-radius: 3px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+    line-height: 55px;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.3s;
+
+    &_youtube {
+      &:hover {
+        background-color: #f00;
+
+        .social__svg_youtube {
+          fill: #fff;
+        }
+      }
+    }
+
+    &_fb {
+      &:hover {
+        background-color: #3b5998;
+
+        .social__svg_fb {
+          fill: #fff;
+        }
+      }
+    }
+
+    &_inst {
+      &:hover {
+        background-color: #df0096;
+
+        .social__svg_inst {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+
+    &_youtube {
+      fill: #f00;
+    }
+
+    &_fb {
+      fill: #3b5998;
+    }
+
+    &_inst {
+      fill: #df0096;
+    }
+  }
+}
+
+.contacts {
+  @include media(1100) {
+    margin-left: 34px;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 16px;
+    color: #3a3a3a;
+
+    &:not(:first-child) {
+      margin-top: 26px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: -3px;
+      border-radius: 3px;
+      width: 23px;
+      height: 23px;
+      background: center / 50% no-repeat;
+      background-color: #e9e6dc;
+    }
+
+    &_phone {
+      &::before {
+        background-image: url("./../img/phone.svg");
+      }
+    }
+
+    &_message {
+      &::before {
+        background-image: url("./../img/message.svg");
+      }
+    }
+
+    &_location {
+      &::before {
+        background-image: url("./../img/location.svg");
+      }
+    }
+  }
+
+  &__value {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+}

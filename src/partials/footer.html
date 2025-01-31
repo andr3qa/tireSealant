@@ -1,3 +1,63 @@
 <footer class="footer">
-  <div class="container footer__container"></div>
+  <div class="container footer__container">
+    <picture class="logo footer__logo">
+      <source class="logo__src" srcset="./img/logo.webp" type="image/webp">
+      <img class="logo__img" loading="lazy" src="./img/logo.png" width="100" height="100" alt="Лого">
+    </picture>
+    <ul class="list-reset footer-nav">
+      <li class="footer-nav__item"><a href="#" class="footer-nav__link">Преимущества</a></li>
+      <li class="footer-nav__item"><a href="#" class="footer-nav__link">Отзывы</a></li>
+      <li class="footer-nav__item"><a href="#" class="footer-nav__link">Как работает герметик</a></li>
+      <li class="footer-nav__item"><a href="#" class="footer-nav__link">FAQ</a></li>
+    </ul>
+    <ul class="list-reset social footer__social">
+      <li class="social__item">
+        <a href="#" class="social__link social__link_youtube">
+          <svg class="social__svg social__svg_youtube">
+            <use xlink:href="img/sprite.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link social__link_fb">
+          <svg class="social__svg social__svg_fb">
+            <use xlink:href="img/sprite.svg#fb"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link social__link_inst">
+          <svg class="social__svg social__svg_inst">
+            <use xlink:href="img/sprite.svg#inst"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <ul class="list-reset contacts footer__contacts">
+      <li class="contacts__item contacts__item_phone">
+        <p class="contacts__name">
+          Наш телефон:
+        </p>
+        <p class="contacts__value">
+          +38 (097) 135 56 78
+        </p>
+      </li>
+      <li class="contacts__item contacts__item_message">
+        <p class="contacts__name">
+          Наш e-mail:
+        </p>
+        <p class="contacts__value">
+          drivesafe@gmail.com
+        </p>
+      </li>
+      <li class="contacts__item contacts__item_location">
+        <p class="contacts__name">
+          Наш адрес:
+        </p>
+        <p class="contacts__value">
+          г.Киев, ул. Шувалова, дом №35
+        </p>
+      </li>
+    </ul>
+  </div>
 </footer>

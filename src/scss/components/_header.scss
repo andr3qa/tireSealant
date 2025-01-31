@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 45px;
 
     @include media(1100) {
       position: absolute;
@@ -46,7 +47,7 @@
   }
 
   &__connection {
-    margin-left: 97px;
+    // margin-left: 97px;
 
     @include media(1100) {
       align-self: flex-end;
